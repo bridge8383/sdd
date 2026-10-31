@@ -1,0 +1,17 @@
+schema: spec-driven
+
+context: |
+  Escribe los artefactos de OpenSpec en español.
+  El contrato de API disponible está en src/main/resources/openapi.yaml.
+  Ese archivo se presenta como una propuesta para revisión: no des por aprobados
+  el endpoint, el método, el formato de respuesta, el mapeo de errores, la regla
+  exacta de antigüedad de un mes ni la dirección contable de los saldos. Mantén
+  esas decisiones como pendientes hasta que el responsable las confirme.
+
+rules:
+  proposal:
+    - Distingue los hechos confirmados, los supuestos y las decisiones pendientes.
+    - No conviertas las propuestas de openapi.yaml en requisitos aprobados.
+  specs:
+    - Escribe requisitos observables y criterios de aceptación verificables.
+    - Conserva la trazabilidad con el contrato OpenAPI cuando corresponda.

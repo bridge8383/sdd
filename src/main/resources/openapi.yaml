@@ -1,0 +1,117 @@
+openapi: 3.1.2
+info:
+  title: API de devolución de transacciones
+  version: 0.1.0
+  description: >-
+    Propuesta OpenAPI para HU-FUNC-01. El path, método HTTP, formato de
+    resultado y mapeo de errores son decisiones propuestas para revisión; el
+    brief no los define. La operación se modela como devolución completa de una
+    transacción elegible.
+servers:
+  - url: https://{host}/api/v1
+    description: Servidor por configurar; host es un marcador de posición.
+    variables:
+      host:
+        default: localhost
+        description: Host del servicio, pendiente de configuración.
+paths:
+  /transactions/{transactionId}/refund:
+    post:
+      operationId: refundTransaction
+      summary: Devolver una transacción monetaria
+      description: >-
+        Devuelve una transacción existente en estado COMPLETA y dentro del
+        límite de antigüedad de un mes. La transacción queda en estado DEVUELTA,
+        se registra refundedAt y se actualizan las cuentas involucradas. La
+        regla exacta del mes y la dirección contable de los saldos deben
+        confirmarse antes de implementar.
+      parameters:
+        - name: transactionId
+          in: path
+          required: true
+          description: Identificador de la transacción; formato por definir.
+          schema:
+            type: string
+            minLength: 1
+      responses:
+        '200':
+          description: Devolución procesada.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RefundResult'
+        '400':
+          description: Identificador mal formado.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiProblem'
+        '404':
+          description: La transacción no existe.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiProblem'
+        '409':
+          description: >-
+            La transacción no está en estado COMPLETA, ya fue devuelta o existe
+            un conflicto concurrente.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiProblem'
+        '422':
+          description: La transacción excede el límite de antigüedad permitido.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiProblem'
+        '500':
+          description: Error inesperado; no debe informarse éxito parcial.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ApiProblem'
+      # La autenticación/autorización no está definida en el brief.
+components:
+  schemas:
+    RefundResult:
+      type: object
+      additionalProperties: false
+      required:
+        - transactionId
+        - status
+        - refundedAt
+      properties:
+        transactionId:
+          type: string
+          description: Identificador de la transacción devuelta.
+        status:
+          type: string
+          const: DEVUELTA
+          description: Estado de la transacción después de la devolución.
+        refundedAt:
+          type: string
+          format: date-time
+          description: Instante de finalización de la devolución, formato RFC 3339.
+    ApiProblem:
+      type: object
+      description: Error de API con forma compatible con Problem Details.
+      properties:
+        type:
+          type: string
+          format: uri-reference
+        title:
+          type: string
+        status:
+          type: integer
+          minimum: 400
+          maximum: 599
+        detail:
+          type: string
+        code:
+          type: string
+          description: Código de error estable del servicio; catálogo por definir.
+        instance:
+          type: string
+          format: uri-reference
