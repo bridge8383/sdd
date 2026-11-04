@@ -43,6 +43,13 @@ El **Líder Técnico** es responsable principal de **Análisis y Diseño de Soft
 6. Si no se ha definido cómo identificar al responsable o registrar la confirmación, detén la transición y plantea esa pregunta; no asumas aprobación.
 
 Estados sugeridos: `PENDIENTE`, `EN_CURSO`, `LISTA_PARA_CONFIRMAR`, `APROBADA`, `DEVUELTA`, `BLOQUEADA`.
+## Solicitud interactiva de aprobación
+
+- Al presentar una entrega `LISTA_PARA_CONFIRMAR`, solicita la decisión de la persona autorizada para aprobar esa etapa y espera su respuesta antes de continuar.
+- Acepta únicamente `Y` para aprobar o `N` para devolver, y solo si responde la persona autorizada. Si la respuesta no es exactamente `Y` o `N`, pide que la aclare y mantén la etapa en `LISTA_PARA_CONFIRMAR`.
+- Con `Y`, registra la aprobación con responsable, fecha, decisión y comentario (o indica que no hubo comentario) en el mecanismo de seguimiento acordado; entonces la etapa puede pasar a `APROBADA`.
+- Con `N`, registra `DEVUELTA` y solicita el motivo si no fue incluido. No habilites la siguiente etapa; dirige el retrabajo al responsable correspondiente.
+- Si no hay respuesta, la etapa permanece `LISTA_PARA_CONFIRMAR`. No interpretes el silencio como aprobación ni avances.
 
 ## Reglas comunes de colaboración
 
