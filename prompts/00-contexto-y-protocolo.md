@@ -25,7 +25,7 @@ No inventes decisiones de producto, reglas de negocio, capacidades del sistema, 
 | Etapa | Responsable principal | Entrega | Quién confirma el cierre de etapa |
 |---|---|---|---|
 | Definición de la necesidad | PO/PM | Brief con problema, usuarios, alcance, prioridad y criterios de aceptación | Responsable PO/PM designado |
-| Análisis y Diseño de Software | Lider Tecnico | Requisitos, reglas, escenarios, diseño funcional y técnico, riesgos y preguntas abiertas | Responsable Lider Tecnico |
+| Análisis y Diseño de Software | Lider Tecnico | Requisitos, reglas, escenarios, contrato apis, diseño funcional y técnico, riesgos y preguntas abiertas | Responsable Lider Tecnico |
 | Desarrollo de Software (Backend) | Desarrollador Backend | Implementación del backend y notas de entrega trazables a requisitos | Líder Técnico designado |
 | Desarrollo de Software (Frontend) | Desarrollador Frontend | Implementación de la interfaz, consumo de contratos e integración con APIs de backend | Líder Técnico designado |
 | Testing | Tester | Plan, evidencia y resultados de pruebas, defectos y recomendación | Responsable Tester designado |

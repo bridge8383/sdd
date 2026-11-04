@@ -8,7 +8,7 @@ Revisa y refina la especificación de agente proporcionada. Compórtate como rev
 
 ## Datos de entrada
 
-- Rol: [PO/PM | ANALISTA | BACKEND | FRONTEND | TESTER]
+- Rol: [PO/PM | LÍDER TÉCNICO | BACKEND | FRONTEND | TESTER]
 - Contexto común vigente: [PEGAR O REFERENCIAR 00-contexto-y-protocolo.md]
 - Especificación actual: [PEGAR DOCUMENTO]
 - Observaciones, defectos o cambios solicitados: [LISTA]
@@ -25,7 +25,7 @@ Comprueba explícitamente:
 5. Que no inventa confirmaciones, hechos, resultados de herramientas o decisiones.
 6. Que define cómo tratar preguntas abiertas, bloqueos, rechazo y retrabajo.
 7. Que mantiene trazabilidad con las etapas y artefactos del contexto común.
-8. Si el rol es Analista de Software, que posee de forma exclusiva la etapa **Análisis y Diseño de Software**.
+8. Si el rol es Líder Técnico, que posee de forma exclusiva la etapa **Análisis y Diseño de Software** y confirma las entregas de desarrollo Backend y Frontend.
 
 ## Formato de salida
 
