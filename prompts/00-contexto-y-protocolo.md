@@ -16,7 +16,7 @@ Al final si es exitosa se cambia el estado a DEVUELTA y si falla vuelve a APROBA
 - Tecnologías / plataforma: REST API, OpenAPI, Java 21, Quarkus, frontend con Angular 16, H2 Database, JUnit 5, Mockito y JaCoCo.
 - Idioma de comunicación y entregables: español, salvo que el equipo acuerde otro.
 - Responsable humano de producto: PO/PM
-- Responsable humano de aprobación por rol: la persona designada por el equipo para cada rol aprobador indicado en la tabla de etapas y responsables. La aprobación debe registrarse explícitamente en el mecanismo de seguimiento acordado, indicando responsable, fecha, decisión y comentario.
+- Responsable humano de aprobación por rol: la persona designada por el equipo para cada rol aprobador indicado en la tabla de etapas y responsables. El registro de aprobación es la conversación con el agente en la que el responsable responde `Y` o `N`; debe conservarse el historial y quedar identificados el responsable, la fecha, la decisión y el comentario. Si la plataforma no conserva el historial o no permite identificar al responsable, la etapa permanece `LISTA_PARA_CONFIRMAR` hasta acordar un registro alternativo.
 
 No inventes decisiones de producto, reglas de negocio, capacidades del sistema, resultados de ejecución ni aprobaciones. Separa hechos confirmados, supuestos y preguntas abiertas. Si una ausencia impide avanzar con seguridad, solicita la decisión necesaria y deja el trabajo bloqueado en la etapa correspondiente.
 
@@ -37,7 +37,7 @@ El **Líder Técnico** es responsable principal de **Análisis y Diseño de Soft
 
 1. Completar la entrega no equivale a aprobarla.
 2. Al terminar su trabajo, el agente deja el estado `LISTA_PARA_CONFIRMAR` y presenta la entrega, los criterios revisados, las limitaciones y las preguntas abiertas.
-3. La etapa solo pasa a `APROBADA` cuando el responsable designado confirma explícitamente esa entrega. Registra responsable, fecha, decisión y comentario en el mecanismo de seguimiento acordado.
+3. La etapa solo pasa a `APROBADA` cuando el responsable designado confirma explícitamente esa entrega con `Y` en la conversación con el agente. Esa conversación es el registro: debe conservarse el historial con responsable, fecha, decisión y comentario.
 4. Sin esa confirmación, ninguna etapa posterior puede iniciar. El agente no debe simular, inferir ni escribir una confirmación en nombre de la persona responsable.
 5. Si la entrega se rechaza o requiere cambios, registra `DEVUELTA`, las razones y el destino de retrabajo. Corrige en la etapa correspondiente y vuelve a solicitar confirmación.
 6. Si no se ha definido cómo identificar al responsable o registrar la confirmación, detén la transición y plantea esa pregunta; no asumas aprobación.
@@ -47,13 +47,13 @@ Estados sugeridos: `PENDIENTE`, `EN_CURSO`, `LISTA_PARA_CONFIRMAR`, `APROBADA`, 
 
 - Al presentar una entrega `LISTA_PARA_CONFIRMAR`, solicita la decisión de la persona autorizada para aprobar esa etapa y espera su respuesta antes de continuar.
 - Acepta únicamente `Y` para aprobar o `N` para devolver, y solo si responde la persona autorizada. Si la respuesta no es exactamente `Y` o `N`, pide que la aclare y mantén la etapa en `LISTA_PARA_CONFIRMAR`.
-- Con `Y`, registra la aprobación con responsable, fecha, decisión y comentario (o indica que no hubo comentario) en el mecanismo de seguimiento acordado; entonces la etapa puede pasar a `APROBADA`.
+- Con `Y`, conserva la conversación como registro de aprobación con responsable, fecha, decisión y comentario (o indica que no hubo comentario); entonces la etapa puede pasar a `APROBADA`.
 - Con `N`, registra `DEVUELTA` y solicita el motivo si no fue incluido. No habilites la siguiente etapa; dirige el retrabajo al responsable correspondiente.
 - Si no hay respuesta, la etapa permanece `LISTA_PARA_CONFIRMAR`. No interpretes el silencio como aprobación ni avances.
 
 ## Reglas comunes de colaboración
 
-- Trabaja dentro del alcance confirmado. Expón cualquier cambio de alcance para decisión del PO/PM.
+- Trabaja dentro del alcance confirmado.
 - Mantén trazabilidad entre necesidad, requisitos, diseño, cambios y pruebas usando identificadores estables cuando sea posible.
 - No ocultes incertidumbre: registra hechos, supuestos, decisiones requeridas y riesgos por separado.
 - No afirmes que ejecutaste código, pruebas, herramientas o integraciones si no hay evidencia de esa ejecución.
