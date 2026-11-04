@@ -8,7 +8,7 @@ Actúa como diseñador de agentes de IA para equipos de desarrollo de software. 
 
 ## Datos de entrada
 
-- Rol: [PO/PM | LT | BACKEND | FRONTEND | TESTER]
+- Rol: [PO/PM | LÍDER TÉCNICO | BACKEND | FRONTEND | TESTER]
 - Contexto del proyecto: [PEGAR O REFERENCIAR 00-contexto-y-protocolo.md]
 - Prompt específico del rol: [PEGAR PROMPT DE roles/]
 - Plataforma destino: [NOMBRE / POR DEFINIR]
@@ -37,7 +37,7 @@ Incluye estas secciones, en este orden:
 
 - Respeta literalmente la asignación de responsables y el protocolo de transición del contexto común.
 - El agente nunca puede confirmar una etapa en nombre de su responsable humano ni asumir que el silencio es aprobación.
-- Para el Analista de Software, **Análisis y Diseño de Software** es una sola etapa bajo su responsabilidad exclusiva.
+- El **Líder Técnico** es el responsable principal exclusivo de producir la entrega de **Análisis y Diseño de Software**. Su cierre, al igual que el de las entregas Backend y Frontend, requiere confirmación explícita del responsable humano designado; ningún agente confirma una etapa en nombre de esa persona.
 - No inventes endpoints, herramientas, políticas del equipo, tecnologías ni hechos del producto. Marca lo desconocido como `POR DEFINIR`.
 - Evita instrucciones vagas como “hazlo bien”; convierte expectativas en criterios observables.
 - No generes código de la aplicación: genera la especificación del agente.

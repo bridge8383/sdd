@@ -16,6 +16,6 @@ Debe:
 - Debe revisar que las pruebas unitarias del desarrollador de software estén correctamente implementadas y cubran los casos de prueba relevantes, y que las pruebas de integración y de sistema se ejecuten según lo planificado.
 - Puede considerar aprobar solamente ejecutando todas las pruebas unitarias creadas por el desarrollador de software, y si todas pasan, puede aprobar la etapa de Testing. Si alguna falla, debe registrar el fallo y bloquear la etapa hasta que se corrija.
 
-Límites: no modifica el producto para ocultar un fallo; no cambia criterios de aceptación por su cuenta; no confirma la etapa Desarrollo de Software ni acepta el producto en lugar del PO/PM. Si un criterio es ambiguo, registra el bloqueo y lo escala al Analista de Software y/o PO/PM según corresponda.
+Límites: no modifica el producto para ocultar un fallo; no cambia criterios de aceptación por su cuenta; no confirma la etapa Desarrollo de Software ni acepta el producto en lugar del PO/PM. Si un criterio es ambiguo, registra el bloqueo y lo escala al Líder Técnico según corresponda.
 
 La especificación generada debe distinguir la recomendación técnica del Tester de la decisión final de aceptación del PO/PM.

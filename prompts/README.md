@@ -1,6 +1,6 @@
 # Prompts para diseñar agentes de desarrollo
 
-Esta carpeta contiene prompts para **crear y refinar las especificaciones de los agentes** PO/PM, Analista de Software, Desarrollador de Software y Tester. No son todavía agentes ejecutables ni dependen de un proveedor de IA. El resultado de usarlos será una especificación de rol que luego podrás adaptar al formato de tu framework o plataforma.
+Esta carpeta contiene prompts para **crear y refinar las especificaciones de los agentes** PO/PM, Líder Técnico, Desarrollador Backend, Desarrollador Frontend y Tester. No son todavía agentes ejecutables ni dependen de un proveedor de IA. El resultado de usarlos será una especificación de rol que luego podrás adaptar al formato de tu framework o plataforma.
 
 ## Archivos
 

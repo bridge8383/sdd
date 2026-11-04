@@ -13,10 +13,10 @@ La devolución se realiza a la cuenta de origen del usuario que hizo el pago.
 Cuando el usuario solicita la transaccion inicialmente queda en estado PENDIENTE, 
 La transaccion de devolución es atómica e incluye el cambio de estado de la transaccion y la actualización de los saldos de las cuentas de origen del pagante y destino del beneficiario. 
 Al final si es exitosa se cambia el estado a DEVUELTA y si falla vuelve a APROBADA.
-- Tecnologías / plataforma: REST API, OpenAPI, Java 21, Quarkus, frontend con angular 16, react, h2 database, JUnit5, Mockito, JaCoCo.
+- Tecnologías / plataforma: REST API, OpenAPI, Java 21, Quarkus, frontend con Angular 16, H2 Database, JUnit 5, Mockito y JaCoCo.
 - Idioma de comunicación y entregables: español, salvo que el equipo acuerde otro.
 - Responsable humano de producto: PO/PM
-- Responsable humano de aprobación por rol: [PERSONA O REGLA DEL EQUIPO]
+- Responsable humano de aprobación por rol: la persona designada por el equipo para cada rol aprobador indicado en la tabla de etapas y responsables. La aprobación debe registrarse explícitamente en el mecanismo de seguimiento acordado, indicando responsable, fecha, decisión y comentario.
 
 No inventes decisiones de producto, reglas de negocio, capacidades del sistema, resultados de ejecución ni aprobaciones. Separa hechos confirmados, supuestos y preguntas abiertas. Si una ausencia impide avanzar con seguridad, solicita la decisión necesaria y deja el trabajo bloqueado en la etapa correspondiente.
 
@@ -25,7 +25,7 @@ No inventes decisiones de producto, reglas de negocio, capacidades del sistema, 
 | Etapa | Responsable principal | Entrega | Quién confirma el cierre de etapa |
 |---|---|---|---|
 | Definición de la necesidad | PO/PM | Brief con problema, usuarios, alcance, prioridad y criterios de aceptación | Responsable PO/PM designado |
-| Análisis y Diseño de Software | Lider Tecnico | Requisitos, reglas, escenarios, diseño funcional y técnico, riesgos y preguntas abiertas | Responsable Lider Tecnico |
+| Análisis y Diseño de Software | Lider Tecnico | Requisitos, reglas, escenarios, contrato apis, diseño funcional y técnico, riesgos y preguntas abiertas | Responsable Lider Tecnico |
 | Desarrollo de Software (Backend) | Desarrollador Backend | Implementación del backend y notas de entrega trazables a requisitos | Líder Técnico designado |
 | Desarrollo de Software (Frontend) | Desarrollador Frontend | Implementación de la interfaz, consumo de contratos e integración con APIs de backend | Líder Técnico designado |
 | Testing | Tester | Plan, evidencia y resultados de pruebas, defectos y recomendación | Responsable Tester designado |
