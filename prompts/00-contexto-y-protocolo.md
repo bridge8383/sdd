@@ -5,12 +5,17 @@ Incluye este contenido como contexto compartido al generar o ejecutar cualquiera
 ## Contexto del proyecto
 
 - Nombre: Devolución de depósitos
-- Producto o problema que resuelve: Cuando exista un error en la transacción de depósito, el sistema debe permitir al usuario solicitar la devolución del dinero depositado.
-- Usuarios previstos: [USUARIOS]
-- Dominio y restricciones relevantes: [DOMINIO Y RESTRICCIONES]
-- Tecnologías / plataforma: [TECNOLOGÍAS O POR DEFINIR]
+- Producto o problema que resuelve: Cuando un usuario deposite dinero en la cuenta de un usuario equivocado, el sistema debe permitir que el usuario que hizo el pago solicite la devolución del dinero depositado.
+- Usuarios previstos: El usuario que realiza la transacción de pago, es decir que envía el dinero a otra cuenta de otro cliente.
+- Dominio y restricciones relevantes: La transacción tiene estado ACEPTADA para poder solicitar la devolución. 
+El usuario debe solicitar la devolucion como maximo 5 minutos despues de efectuada la transacción. 
+La devolución se realiza a la cuenta de origen del usuario que hizo el pago. 
+Cuando el usuario solicita la transaccion inicialmente queda en estado PENDIENTE, 
+La transaccion de devolución es atómica e incluye el cambio de estado de la transaccion y la actualización de los saldos de las cuentas de origen del pagante y destino del beneficiario. 
+Al final si es exitosa se cambia el estado a DEVUELTA y si falla vuelve a APROBADA.
+- Tecnologías / plataforma: REST API, OpenAPI, Java 21, Quarkus, frontend con angular 16, react, h2 database, JUnit5, Mockito, JaCoCo.
 - Idioma de comunicación y entregables: español, salvo que el equipo acuerde otro.
-- Responsable humano de producto: [PERSONA O POR DEFINIR]
+- Responsable humano de producto: PO/PM
 - Responsable humano de aprobación por rol: [PERSONA O REGLA DEL EQUIPO]
 
 No inventes decisiones de producto, reglas de negocio, capacidades del sistema, resultados de ejecución ni aprobaciones. Separa hechos confirmados, supuestos y preguntas abiertas. Si una ausencia impide avanzar con seguridad, solicita la decisión necesaria y deja el trabajo bloqueado en la etapa correspondiente.
@@ -20,12 +25,13 @@ No inventes decisiones de producto, reglas de negocio, capacidades del sistema, 
 | Etapa | Responsable principal | Entrega | Quién confirma el cierre de etapa |
 |---|---|---|---|
 | Definición de la necesidad | PO/PM | Brief con problema, usuarios, alcance, prioridad y criterios de aceptación | Responsable PO/PM designado |
-| Análisis y Diseño de Software | Analista de Software | Requisitos, reglas, escenarios, diseño funcional y técnico, riesgos y preguntas abiertas | Responsable Analista de Software designado |
-| Desarrollo de Software | Desarrollador de Software | Implementación, cambios y notas de entrega trazables a requisitos | Responsable Desarrollador de Software designado |
+| Análisis y Diseño de Software | Lider Tecnico | Requisitos, reglas, escenarios, diseño funcional y técnico, riesgos y preguntas abiertas | Responsable Lider Tecnico |
+| Desarrollo de Software (Backend) | Desarrollador Backend | Implementación del backend y notas de entrega trazables a requisitos | Líder Técnico designado |
+| Desarrollo de Software (Frontend) | Desarrollador Frontend | Implementación de la interfaz, consumo de contratos e integración con APIs de backend | Líder Técnico designado |
 | Testing | Tester | Plan, evidencia y resultados de pruebas, defectos y recomendación | Responsable Tester designado |
 | Aceptación y Cierre | PO/PM | Decisión de aceptación o solicitud de cambios | Responsable PO/PM designado |
 
-El **Analista de Software** es el único responsable principal de la etapa **Análisis y Diseño de Software**. No transfieras la responsabilidad de producir o confirmar esa entrega al Desarrollador de Software ni al PO/PM. Otros roles pueden aportar preguntas o comentarios por el proceso definido, pero el Analista de Software mantiene la autoría y la confirmación de la etapa.
+El **Líder Técnico** es responsable principal de **Análisis y Diseño de Software** y confirma el cierre de las entregas de desarrollo backend y frontend. Los desarrolladores Backend y Frontend son responsables de implementar sus respectivas partes y presentar evidencia de cumplimiento; no se aprueban a sí mismos. El Líder Técnico revisa la solución frente a los requisitos, el diseño y los criterios acordados, y registra la decisión. Otros roles pueden aportar comentarios, pero no sustituyen esta aprobación.
 
 ## Regla obligatoria de transición
 

@@ -7,13 +7,13 @@ Esta carpeta contiene prompts para **crear y refinar las especificaciones de los
 - `00-contexto-y-protocolo.md`: contexto común, ciclo de vida y reglas de aprobación que todos los roles deben respetar.
 - `01-generar-rol.md`: plantilla para generar la especificación inicial de un rol.
 - `02-refinar-rol.md`: plantilla para revisar y mejorar una especificación existente.
-- `roles/rol_po-pm.md`, `roles/rol_analista.md`, `roles/rol_desarrollador.md`, `roles/rol_tester.md`: prompts específicos para generar cada rol.
+- `roles/rol_po-pm.md`, `roles/rol_LiderTecnico.md`, `roles/rol_backend.md`, `roles/rol_tester.md`: prompts específicos para generar cada rol.
 
 ## Uso recomendado
 
 1. Completa los datos del proyecto en `00-contexto-y-protocolo.md`.
 2. Usa el prompt del rol correspondiente dentro de `roles/` para generar su primera especificación.
-3. Guarda la respuesta como un archivo de especificación, por ejemplo `agents/po-pm.md` (esa carpeta aún no se crea: contendrá los agentes refinados).
+3. Guarda la respuesta como un archivo de especificación, por ejemplo `../.agents/po-pm.md` (esa carpeta aún no se crea: contendrá los agentes refinados).
 4. Refina cada especificación con `02-refinar-rol.md`, pasando el documento actual y las observaciones recibidas.
 5. Revisa manualmente el resultado y confirma que respeta el protocolo común antes de usarlo para configurar un agente.
 

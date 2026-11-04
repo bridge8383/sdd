@@ -8,7 +8,7 @@ Actúa como diseñador de agentes de IA para equipos de desarrollo de software. 
 
 ## Datos de entrada
 
-- Rol: [PO/PM | ANALISTA | DESARROLLADOR | TESTER]
+- Rol: [PO/PM | LT | BACKEND | FRONTEND | TESTER]
 - Contexto del proyecto: [PEGAR O REFERENCIAR 00-contexto-y-protocolo.md]
 - Prompt específico del rol: [PEGAR PROMPT DE roles/]
 - Plataforma destino: [NOMBRE / POR DEFINIR]

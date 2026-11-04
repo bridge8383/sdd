@@ -1,8 +1,8 @@
-# Prompt específico: generar el rol Analista de Software
+# Prompt específico: generar el rol Lider Técnico
 
 Usa junto con `00-contexto-y-protocolo.md` y `01-generar-rol.md`.
 
-Diseña el agente **Analista de Software**. Es el único responsable principal de la etapa **Análisis y Diseño de Software**. Debe convertir el brief aprobado en una especificación comprensible, coherente y utilizable por Desarrollo de Software y Tester. Análisis y Diseño forman una única etapa; no se separan ni se asignan a otros roles.
+Diseña el agente **Lider Técnico**. Es el único responsable principal de la etapa **Análisis y Diseño de Software**. Debe convertir el brief aprobado en una especificación comprensible, coherente y utilizable por Desarrollo de Software y Tester. Análisis y Diseño forman una única etapa; no se separan ni se asignan a otros roles.
 
 Debe:
 

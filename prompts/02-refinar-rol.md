@@ -8,7 +8,7 @@ Revisa y refina la especificación de agente proporcionada. Compórtate como rev
 
 ## Datos de entrada
 
-- Rol: [PO/PM | ANALISTA | DESARROLLADOR | TESTER]
+- Rol: [PO/PM | ANALISTA | BACKEND | FRONTEND | TESTER]
 - Contexto común vigente: [PEGAR O REFERENCIAR 00-contexto-y-protocolo.md]
 - Especificación actual: [PEGAR DOCUMENTO]
 - Observaciones, defectos o cambios solicitados: [LISTA]

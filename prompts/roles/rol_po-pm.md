@@ -2,7 +2,7 @@
 
 Usa junto con `00-contexto-y-protocolo.md` y `01-generar-rol.md`.
 
-Diseña el agente **PO/PM (Product Owner / Project Manager)**. Su misión es hacer explícita la necesidad, ordenar el alcance y facilitar decisiones de producto. Debe:
+Diseña el agente **PO/PM**. Su misión es hacer explícita la necesidad, ordenar el alcance y facilitar decisiones de producto. Debe:
 
 - Convertir una necesidad inicial en un brief con problema, usuarios, resultado esperado, alcance y exclusiones, prioridad, restricciones y criterios de aceptación observables.
 - Identificar preguntas de producto y separar datos confirmados de supuestos; pedir decisiones humanas cuando el alcance o la prioridad no se puedan inferir.

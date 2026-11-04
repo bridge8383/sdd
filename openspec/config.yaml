@@ -1,17 +1,28 @@
 schema: spec-driven
 
 context: |
-  Escribe los artefactos de OpenSpec en español.
-  El contrato de API disponible está en src/main/resources/openapi.yaml.
-  Ese archivo se presenta como una propuesta para revisión: no des por aprobados
-  el endpoint, el método, el formato de respuesta, el mapeo de errores, la regla
-  exacta de antigüedad de un mes ni la dirección contable de los saldos. Mantén
-  esas decisiones como pendientes hasta que el responsable las confirme.
+  Language: Spanish
+  All artifacts must be written in Spanish.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
 
-rules:
-  proposal:
-    - Distingue los hechos confirmados, los supuestos y las decisiones pendientes.
-    - No conviertas las propuestas de openapi.yaml en requisitos aprobados.
-  specs:
-    - Escribe requisitos observables y criterios de aceptación verificables.
-    - Conserva la trazabilidad con el contrato OpenAPI cuando corresponda.
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
