@@ -7,8 +7,8 @@ Incluye este contenido como contexto compartido al generar o ejecutar cualquiera
 - Nombre: Devolución de depósitos
 - Producto o problema que resuelve: Cuando un usuario deposite dinero en la cuenta de un usuario equivocado, el sistema debe permitir que el usuario que hizo el pago solicite la devolución del dinero depositado.
 - Usuarios previstos: El usuario que realiza la transacción de pago, es decir que envía el dinero a otra cuenta de otro cliente.
-- Dominio y restricciones relevantes: La transacción tiene estado ACEPTADA para poder solicitar la devolución. 
-El usuario debe solicitar la devolucion como maximo 5 minutos despues de efectuada la transacción. 
+- Dominio y restricciones relevantes: La transacción tiene estado APROBADA para poder solicitar la devolución. 
+El usuario puede solicitar la devolucion si el tiempo transcurrido desde la marca de tiempo de procesamiento de la transacción es menor o igual a 5 minutos, esta hora es un campo ya almacenado en la base de datos. 
 La devolución se realiza a la cuenta de origen del usuario que hizo el pago. 
 Cuando el usuario solicita la transaccion inicialmente queda en estado PENDIENTE, 
 La transaccion de devolución es atómica e incluye el cambio de estado de la transaccion y la actualización de los saldos de las cuentas de origen del pagante y destino del beneficiario. 
